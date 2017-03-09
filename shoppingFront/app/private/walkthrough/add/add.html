@@ -1,0 +1,89 @@
+<div>
+    <a ui-sref="walkthrough" class="pull-right btn btn-primary btn-outline btn-rounded">walkthrough</a>
+    <h3>Walkthrough <small>Add/Remove Walkthrough</small></h3>
+    <div class="jumbotron box">
+        <h4>Picture</h4>
+
+
+
+        <div class="container" >
+            <div>
+                <div >
+                    <h6> Select Cover Image</h6>  <br>
+                    <input name="sampleFile"
+                           kendo-upload
+                           k-options="mainUploadOptions"
+                           type="file" />
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    <div class="jumbotron box">
+
+        <h4>Title and details</h4>
+
+
+
+        <div class="container" >
+            <h6>Title</h6>
+            <input k-content style="width: 100%" ng-model="model.title">
+            <br>
+
+
+            <h6>Series</h6>
+            <input k-content style="width: 100%"ng-model="model.series">
+            <br>
+            <h6>Artist</h6>
+            <input k-content style="width: 100%" ng-model="model.artist">
+            <br>
+
+            <h6>Translator</h6>
+            <input k-content style="width: 100%" ng-model="model.translator">
+            <br>
+
+            <h6>Scanlator</h6>
+            <input k-content style="width: 100%" ng-model="model.scanlator">
+            <br>
+
+            <h6>Magazine</h6>
+            <input k-content style="width: 100%" ng-model="model.magazine">
+            <br>
+
+            <h6>Description</h6>
+            <textarea kendo-editor  k-ng-model="model.content"></textarea><br>
+
+            <h6>Languages</h6>
+            <select kendo-combo-box
+                    k-options="selectOptionsLanguage" k-ng-model="selectedLanguage" style="width: 100%" >
+            </select>
+            <h6>Genre</h6>
+            <select kendo-multi-select k-options="selectOptionsGenre" k-ng-model="selectedGenre"  style="width: 100%;"></select>
+            <br>
+
+            <h6>Tags</h6>
+            <select kendo-multi-select  k-options="selectOptionsTags" k-ng-model="selectedTags" style="width: 100%;"></select>
+            <br>
+
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="jumbotron box">
+        <div class="container">
+            <button class="k-primary" ng-click="publishWalkthrough()">Publish</button>
+        </div>
+    </div>
+
+</div>
+

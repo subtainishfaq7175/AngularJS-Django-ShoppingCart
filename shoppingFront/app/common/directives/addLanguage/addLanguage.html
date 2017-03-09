@@ -1,0 +1,63 @@
+<div layout="column">
+    <div>
+        <md-button
+                class="md-icon-button md-mini phone-button" style="float: right; "
+                ng-click="addWidgetCtrl.addObject(pIndex)"
+        >
+        <md-icon class="phoneicons material-icons md-primary"
+                 ng-class="{'grey-icon': addWidgetCtrl.objectList.length <0}"
+
+        >add_circle
+        </md-icon>
+    </md-button>
+    </div>
+
+
+
+
+        <table width="100%">
+            <tr>
+                <th><h6><b>Language Name</b></h6></th>
+                <th><h6><b>Sub or Dub</b></h6></th>
+                <th><h6><b>Upload Flag</b></h6></th>
+            </tr>
+            <tr layout="row" width="100%" style="margin: 10px" ng-repeat="(pIndex,item) in addWidgetCtrl.objectList" flex>
+                <td><input k-content style="width: 100%" ng-model="item.title"></td>
+                <td><input k-content style="width: 100%" ng-model="item.content"></td>
+                <td> <input name="files" kendo-upload type="file" /></td>
+                <td> <md-button
+                                class="md-icon-button md-mini phone-button"
+                                ng-click="onKeyDown(item)"
+                >
+                    <md-icon class="phoneicons material-icons md-warn"
+
+
+                    >done
+                    </md-icon>
+                </md-button>
+
+                <td> <md-button
+                                class="md-icon-button md-mini phone-button"
+
+                                ng-click="addWidgetCtrl.deleteObject(item,pIndex)"
+
+                >
+                    <md-icon class="phoneicons material-icons md-warn"
+
+
+                    >remove_circle
+                    </md-icon>
+                </md-button></td>
+
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+
+</div>

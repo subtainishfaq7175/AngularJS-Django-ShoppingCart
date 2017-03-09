@@ -1,0 +1,94 @@
+<div layout="column">
+    <div>
+        <button class="k-primary" style="float: left ;margin-left: 25px" ng-click="addEpisodeCtrl.addObject(pIndex)"
+        >+ New Episode</button>
+    </div>
+
+
+    <div layout="row" width="100%" style="margin: 10px" ng-repeat="(pIndex,item) in addEpisodeCtrl.objectList" flex>
+
+
+
+
+                <div class="container">
+                    <div class="well well-sm">
+
+                    <input k-content placeholder="Title" ng-model="item.title" style="width: 100%;" >
+                    <input kendo-date-picker
+                           style="width: 100%;"
+                           placeholder="Date"
+                           k-ng-model="item.release_date"
+                    />
+                        <select kendo-combo-box
+                                k-options="selectOptionsLanguage" k-ng-model="item.language" style="width: 100%" >
+                        </select>
+                        <button style="float: right;"
+                            class="k-primary"
+                            ng-click="addEpisodeCtrl.deleteObject(item,pIndex)">Delete
+
+                        </button>
+                        <br><br>
+                    </div>
+
+
+                    <button class="k-primary"  style="float: left ;margin-left: 17px" ng-click="addEpisodeCtrl.addStream(item)" >+ Add Links</button>
+
+
+                    <div class="container">
+                        <div class="well well-sm">
+                            <table style="width: 100%">
+                                <tr>
+                                    <th><b>Host</b></th>
+                                    <th><b>URL</b></th>
+                                    <th><b>Type</b></th>
+                                    <th><b>Delete</b></th>
+
+                                </tr>
+                                <tr ng-repeat="(cIndex,items) in item.streams">
+                                    <td><select kendo-combo-box
+                                                k-options="selectType" k-ng-model="items.url" style="width: 100%" >
+                                    </select>
+                                    </td>
+                                    <td>
+                                        <input k-content ng-model="items.url" >
+                                    </td>
+                                    <td>
+                                        <select kendo-combo-box
+                                                k-options="selectOptionsLinkType" k-ng-model="items.link_type" style="width: 100%" >
+                                        </select>
+                                    </td>
+                                    <td>        <md-button
+                                        class="md-icon-button md-mini phone-button"
+
+                                        ng-click="addEpisodeCtrl.deleteStream(pIndex,cIndex)"
+
+                                    >
+                                        <md-icon class="phoneicons material-icons md-warn"
+
+
+                                        >remove_circle
+                                        </md-icon>
+                                    </md-button>
+                                    </td>
+
+
+                                </tr>
+
+                            </table>
+
+                        </div>
+                    </div>
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</div>

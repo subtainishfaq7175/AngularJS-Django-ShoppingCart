@@ -1,0 +1,55 @@
+<div layout="column">
+    <div>
+        <md-button
+                class="md-icon-button md-mini phone-button" style="float: right; margin-right: 50%"
+                ng-click="addWidgetCtrl.addObject(pIndex)"
+        >
+        <md-icon class="phoneicons material-icons md-primary"
+                 ng-class="{'grey-icon': addWidgetCtrl.objectList.length <0}"
+
+        >add_circle
+        </md-icon>
+    </md-button>
+    </div>
+
+
+    <div layout="row" width="100%" style="margin: 10px" ng-repeat="(pIndex,item) in addWidgetCtrl.objectList" flex>
+
+
+
+        <input k-content ng-model="item.content" >
+
+
+        <md-button
+                   class="md-icon-button md-mini phone-button"
+
+                   ng-click="onKeyDown(item)"
+
+        >
+            <md-icon class="phoneicons material-icons md-warn"
+            >done
+            </md-icon>
+       </md-button>
+
+
+
+        <md-button
+                   class="md-icon-button md-mini phone-button"
+
+                   ng-click="addWidgetCtrl.deleteObject(item,pIndex)"
+
+        >
+            <md-icon class="phoneicons material-icons md-warn"
+
+
+            >remove_circle
+            </md-icon>
+       </md-button>
+
+
+
+
+        </div>
+
+
+</div>

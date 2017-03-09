@@ -1,0 +1,12 @@
+node_modules/
+app/bower_components/
+.tmp/
+#dist/
+gen/
+docs/
+
+.idea/workspace.xml
+
+.idea/vcs.xml
+
+.idea/workspace.xml

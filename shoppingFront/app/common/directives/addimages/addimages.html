@@ -1,0 +1,47 @@
+<div layout="column">
+    <div>
+        <button class="k-primary" style="float: left ;margin-left: 25px" ng-click="addImagesCtrl.addObject(pIndex)"
+        >+ New Chapter</button>
+    </div>
+
+
+    <div layout="row" width="100%" style="margin: 10px" ng-repeat="(pIndex,item) in addImagesCtrl.objectList" flex>
+
+        <div class="container">
+            <div class="well well-sm">
+
+        <input k-content placeholder="Chapters" ng-model="item.title" style="width: 100%;" >
+
+
+        <input name="sampleFile"
+               ng-attr-id="{{pIndex }}"
+               kendo-upload
+               k-options="addImagesCtrl.scope.mainUploadOptionsScreen"
+               type="file" />
+
+                <div sv-root sv-part="item.images" class="sortable-container grid" >
+                    <div ng-repeat="items in item.images" sv-element class="well grid">
+                        <img width="250" height="250" draggable="false" ng-src="{{items.image_url}}" />
+                        <label>{{items.image_url.substring(items.image_url.lastIndexOf('/')+1)}}</label>
+                    </div>
+                </div>
+
+        <md-button
+                   class="md-icon-button md-mini phone-button"
+                   ng-click="addImagesCtrl.deleteObject(item,pIndex)">
+            <md-icon class="phoneicons material-icons md-warn"
+
+
+            >remove_circle
+            </md-icon>
+       </md-button>
+
+            </div>
+        </div>
+
+
+
+        </div>
+
+
+</div>
