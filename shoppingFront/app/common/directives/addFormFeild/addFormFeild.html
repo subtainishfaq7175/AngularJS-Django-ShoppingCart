@@ -1,0 +1,46 @@
+<div layout="column">
+    <div>
+        <md-button
+                class="md-icon-button md-mini phone-button" style="float: right;"
+                ng-click="addFeildCtrl.addObject(pIndex)"
+        >
+        <md-icon class="phoneicons material-icons md-primary"
+                 ng-class="{'grey-icon': addFeildCtrl.objectList.length <0}"
+
+        >add_circle
+        </md-icon>
+    </md-button>
+    </div>
+
+
+    <div layout="row" width="100%" style="margin: 10px" ng-repeat="(pIndex,item) in addFeildCtrl.objectList" flex>
+
+
+        <h6 editable-text="item.title" placeholder="click to edit"></h6>
+
+        <input k-content ng-model="item.value" >
+
+
+
+
+
+        <md-button
+                   class="md-icon-button md-mini phone-button"
+
+                   ng-click="addFeildCtrl.deleteObject(item,pIndex)"
+
+        >
+            <md-icon class="phoneicons material-icons md-warn"
+
+
+            >remove_circle
+            </md-icon>
+       </md-button>
+
+
+
+
+        </div>
+
+
+</div>

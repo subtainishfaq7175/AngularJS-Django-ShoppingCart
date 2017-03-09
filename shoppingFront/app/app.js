@@ -66,6 +66,12 @@ angular
             controller: 'ReceiptCtrl',
             templateUrl: 'private/receipt/receipt.html'
           })
+      .state('addproduct', {
+            url: '/addproduct',
+            parent: 'dashboard',
+            controller: 'AddproductCtrl',
+            templateUrl: 'private/addProduct/addProduct.html'
+          })
 
 
   })
