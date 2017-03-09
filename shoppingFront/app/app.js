@@ -86,7 +86,7 @@ function run($rootScope, $http, $state, $localStorage) {
       $rootScope.scopeWorkingVariable=true;
 
 
-      var publicPages = ['login','signup'];
+      var publicPages = ['login','signup','receipt','details'];
       var restrictedPage = publicPages.indexOf(toState.name) === -1;
       if (restrictedPage && !$localStorage.currentUser) {
         $state.go('login');

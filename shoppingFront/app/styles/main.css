@@ -6818,3 +6818,31 @@ small {
   line-height: 1.428571429;
   color: #999;
 }
+
+.blocks{
+  padding-left: 30px;
+}
+.block{
+  border: 1px solid;
+  border-color: #E0E0E0;
+}
+
+.card-block{
+  padding-left: 30px;
+}
+
+.invoice-title h2, .invoice-title h3 {
+  display: inline-block;
+}
+
+.table > tbody > tr > .no-line {
+  border-top: none;
+}
+
+.table > thead > tr > .no-line {
+  border-bottom: none;
+}
+
+.table > tbody > tr > .thick-line {
+  border-top: 2px solid;
+}
