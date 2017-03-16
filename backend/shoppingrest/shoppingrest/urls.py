@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
+from .api.urls import urlpatternsinternal
 from rest_framework import serializers, viewsets, routers
 
 # Serializers define the API representation.
@@ -22,6 +23,9 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ('url', 'username', 'email', 'is_staff')
+
+
+
 
 
 # ViewSets define the view behavior.
@@ -39,5 +43,7 @@ router.register(r'users', UserViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+   url(r'^api/', include(urlpatternsinternal)),
+
 ]
