@@ -5,43 +5,23 @@
 
         <div class="col-md-9">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" ng-repeat="(key,value) in products">
                     <div >
                         <div class="card">
                             <img class="card-img-top" src="images/footer.jpg" class="img-responsive"  width= "100%;" alt="Card image cap">
                             <div class="card-blocks">
-                                <h3 class="card-title">Product title</h3>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <buttion class="btn btn-primary">More Details</buttion>
+                                <h3 class="card-title">{{value.title}}</h3>
+                                <p class="card-text">{{value.description}}</p>
+                                <buttion class="btn btn-primary" ui-sref="details({id: value.id})">More Details</buttion>
                                 <buttion class="btn btn-primary">Ad to cart</buttion>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/footer.jpg" class="img-responsive"  width= "100%;" alt="Card image cap">
-                        <div class="card-block">
-                            <h3 class="card-title">Product title</h3>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <buttion class="btn btn-primary">More Details</buttion>
-                            <buttion class="btn btn-primary">More Details</buttion>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top" src="images/footer.jpg" class="img-responsive"  width= "100%;" alt="Card image cap">
-                        <div class="card-block">
-                            <h3 class="card-title">Product title</h3>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <buttion class="btn btn-primary">More Details</buttion>
-                            <buttion class="btn btn-primary">More Details</buttion>
-                        </div>
-                    </div>
-                </div>
+
+
 
             </div>
         </div>

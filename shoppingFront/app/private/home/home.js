@@ -5,6 +5,7 @@ angular.module('yapp')
   .controller('HomeCtrl', function($scope, $state,simpleObj) {
 
     $scope.$state = $state;
-    console.log(simpleObj);
+    $scope.products=simpleObj.data;
+
 
   });

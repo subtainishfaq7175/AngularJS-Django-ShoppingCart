@@ -5,6 +5,7 @@ angular.module('yapp')
   .controller('DetailsCtrl', function($scope, $state,simpleObj) {
 
     $scope.$state = $state;
+    $scope.details=simpleObj.data;
     console.log(simpleObj);
 
   });
