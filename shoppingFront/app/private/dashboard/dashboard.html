@@ -1,26 +1,58 @@
 <div class="dashboard-page">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
 
-       <div class="text-center">
-           <h2 class=brand>ShoppingMod <small>Admin Dashboard</small></h2>
-        <img src="images/flat-avatar.png" class="user-avatar" /><br />
-        <a ui-sref="login" ng-click="logout()" class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a>
-      </div>
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
+
+            <md-toolbar class="md-theme-indigo">
+                <h1 class="md-toolbar-tools">Menu</h1>
+            </md-toolbar>
+
+            <md-content>
+                <md-list flex="">
+                    <md-subheader class="md-no-sticky">PAGES</md-subheader>
+                    <md-list-item class="md-3-line"  ng-click="$state.go('home')">
+                        <div class="md-list-item-text" layout="column">
+                            <a ui-sref="home">Home <span class="sr-only"></span></a>
+                        </div>
+                    </md-list-item>
+                    <md-divider></md-divider>
+
+                    <md-list-item class="md-3-line"  ng-click="$state.go('receipt')">
+                        <div class="md-list-item-text" layout="column">
+                            <a ui-sref="receipt">Receipt <span class="sr-only"></span></a>
+                        </div>
+                    </md-list-item>
+                    <md-divider></md-divider>
+
+                    <md-list-item class="md-3-line"  ng-click="$state.go('addproduct')">
+                        <div class="md-list-item-text" layout="column">
+                            <a ui-sref="addproduct">Add Product <span class="sr-only"></span></a>
+                        </div>
+                    </md-list-item>
+                    <md-divider></md-divider>
+                    <md-list-item class="md-3-line"  ng-click="toggleLeft()">
+                        <div class="md-list-item-text" layout="column">
+                            <md-button ng-click="toggleLeft()" class="md-raised">
+                                Toggle Sidenav
+                            </md-button>
+                        </div>
+                    </md-list-item>
+                    <md-divider></md-divider>
+                </md-list>
+            </md-content>
 
 
-      <ul class="nav nav-sidebar">
-        <li ng-class="{active: $state.includes('home')}"><a ui-sref="home">Home <span class="sr-only"></span></a></li>
-        <li ng-class="{active: $state.includes('receipt')}"><a ui-sref="receipt">Receipt <span class="sr-only"></span></a></li>
-        <!--<li ng-class="{active: $state.includes('details')}"><a ui-sref="details">Details <span class="sr-only"></span></a></li>-->
-        <li ng-class="{active: $state.includes('addproduct')}"><a ui-sref="addproduct">Add Product <span class="sr-only"></span></a></li>
 
-      </ul>
+        </md-sidenav>
+
+        <md-button ng-click="toggleLeft()" class="md-raised">
+            Toggle Sidenav
+        </md-button>
 
     </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ui-view>
     </div>
   </div>
 </div>
-</div>
+

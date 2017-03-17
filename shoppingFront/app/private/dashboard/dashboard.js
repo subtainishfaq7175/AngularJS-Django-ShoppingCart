@@ -8,7 +8,7 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('DashboardCtrl', function($scope, $state,AuthenticationService,$rootScope) {
+  .controller('DashboardCtrl', function($scope, $state,AuthenticationService,$rootScope,$mdSidenav) {
 
     $scope.$state = $state;
     $scope.logout = logout;
@@ -19,6 +19,15 @@ angular.module('yapp')
       $state.go('login');
 
     };
+
+    $scope.toggleLeft = buildToggler('left');
+    $scope.toggleRight = buildToggler('right');
+
+    function buildToggler(componentId) {
+      return function() {
+        $mdSidenav(componentId).toggle();
+      };
+    }
 
 
   });
