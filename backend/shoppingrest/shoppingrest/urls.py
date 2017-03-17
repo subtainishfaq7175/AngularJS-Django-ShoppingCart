@@ -15,24 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
+
+from shoppingrest.api.views import UserViewSet
 from .api.urls import urlpatternsinternal
 from rest_framework import serializers, viewsets, routers
 
 # Serializers define the API representation.
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ('url', 'username', 'email', 'is_staff')
-
-
 
 
 
 # ViewSets define the view behavior.
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
 
 # Routers provide a way of automatically determining the URL conf.
 router = routers.DefaultRouter()

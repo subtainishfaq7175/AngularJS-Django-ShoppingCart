@@ -9,17 +9,19 @@
 
             <div class="container" >
                 <h6>Product Title</h6>
-                <input k-content style="width: 100%" ng-required="{{validatorServer.companyName}}" ng-model="model.companyName">
+                <input k-content style="width: 100%"  ng-model="model.title">
+                <br>
+
+            <h6>Product Price</h6>
+                <input k-content style="width: 100%"  ng-model="model.price">
                 <br>
 
 
 
-                <h6>Product Type</h6>
-                <select kendo-drop-down-list  ng-required="{{validatorServer.companyType}}" k-options="selectOptionsCompanyType" k-ng-model="model.companyType"  style="width: 100%;"></select>
-                <br>
+
 
                 <h6>Product Description</h6>
-                <textarea kendo-editor k-ng-model="model.companyDescription" ng-required="{{validatorServer.companyDescription}}"></textarea><br>
+                <textarea kendo-editor k-ng-model="model.description"></textarea><br>
                 <br>
 
 
@@ -31,30 +33,30 @@
 
 
 
-        <div class="jumbotron box" ng-if="true">
+        <!--<div class="jumbotron box" ng-if="true">-->
 
-            <h4>Add Images</h4>
-
-
-
-            <div class="container" >
-
-                <add-form-feild
-                    object-list="model.customFeilds"
-
-                ></add-form-feild>
-
-
-            </div>
+            <!--<h4>Add Images</h4>-->
 
 
 
-        </div>
+            <!--<div class="container" >-->
+
+                <!--<add-form-feild-->
+                    <!--object-list="model.customFeilds"-->
+
+                <!--&gt;</add-form-feild>-->
+
+
+            <!--</div>-->
+
+
+
+        <!--</div>-->
 
 
         <div class="jumbotron box">
             <div class="container">
-                <button class="k-primary"  class="k-button k-primary" type="submit" >Publish</button>
+                <button class="k-primary"  class="k-button k-primary" ng-click="publishProduct()" >Publish</button>
             </div>
         </div>
 

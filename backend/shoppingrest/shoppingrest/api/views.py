@@ -1,10 +1,18 @@
 from rest_framework import permissions
 from rest_framework import status
+from rest_framework import viewsets
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 
+
+from django.contrib.auth.models import User
 from .models import *
-from .serializers import ProductSerializer, CartSerializer
+from .serializers import ProductSerializer, CartSerializer, UserSerializer
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 
 @api_view(['GET', 'POST'])
@@ -105,3 +113,18 @@ def cart_detail(request, pk):
     elif request.method == 'DELETE':
         cart.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['POST'])
+@permission_classes((permissions.AllowAny,))
+def create_auth(request):
+    serialized = UserSerializer(data=request.data)
+    if serialized.is_valid():
+        User.objects.create_user(
+            serialized.init_data['email'],
+            serialized.init_data['username'],
+            serialized.init_data['password']
+        )
+        return Response(serialized.data, status=status.HTTP_201_CREATED)
+    else:
+        return Response(serialized._errors, status=status.HTTP_400_BAD_REQUEST)
