@@ -6483,13 +6483,7 @@ button.close {
   padding: 40px 0;
 }
 .dashboard-page {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #ecf0f1;
-  color: #666;
+
   /*
      * Base structure
      */
@@ -6583,11 +6577,11 @@ button.close {
 }
 .dashboard-page .main .jumbotron {
   background: #FFF;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 @media (min-width: 768px) {
   .dashboard-page .main {
-    padding-right: 40px;
+    padding-right: 20px;
     padding-left: 40px;
   }
 }
@@ -6717,7 +6711,6 @@ to prevent collapsing during animation*/
   right: 0;
   bottom: 0;
   top: 0;
-  padding-top:50px;
 }
 .ui-view-container {
   position: relative;

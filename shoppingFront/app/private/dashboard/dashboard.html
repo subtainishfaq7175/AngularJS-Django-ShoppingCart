@@ -1,58 +1,70 @@
-<div class="dashboard-page">
-  <div class="container-fluid">
-    <div class="row">
-
-        <md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
-
-            <md-toolbar class="md-theme-indigo">
-                <h1 class="md-toolbar-tools">Menu</h1>
-            </md-toolbar>
-
-            <md-content>
-                <md-list flex="">
-                    <md-subheader class="md-no-sticky">PAGES</md-subheader>
-                    <md-list-item class="md-3-line"  ng-click="$state.go('home')">
-                        <div class="md-list-item-text" layout="column">
-                            <a ui-sref="home">Home <span class="sr-only"></span></a>
-                        </div>
-                    </md-list-item>
-                    <md-divider></md-divider>
-
-                    <md-list-item class="md-3-line"  ng-click="$state.go('receipt')">
-                        <div class="md-list-item-text" layout="column">
-                            <a ui-sref="receipt">Receipt <span class="sr-only"></span></a>
-                        </div>
-                    </md-list-item>
-                    <md-divider></md-divider>
-
-                    <md-list-item class="md-3-line"  ng-click="$state.go('addproduct')">
-                        <div class="md-list-item-text" layout="column">
-                            <a ui-sref="addproduct">Add Product <span class="sr-only"></span></a>
-                        </div>
-                    </md-list-item>
-                    <md-divider></md-divider>
-                    <md-list-item class="md-3-line"  ng-click="toggleLeft()">
-                        <div class="md-list-item-text" layout="column">
-                            <md-button ng-click="toggleLeft()" class="md-raised">
-                                Toggle Sidenav
-                            </md-button>
-                        </div>
-                    </md-list-item>
-                    <md-divider></md-divider>
-                </md-list>
-            </md-content>
-
-
-
-        </md-sidenav>
-
-        <md-button ng-click="toggleLeft()" class="md-raised">
-            Toggle Sidenav
+<md-toolbar class="md-hue-2" layout-align="start start">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
         </md-button>
+        <h2>
+            <span>Toolbar with Disabled/Enabled Icon Buttons</span>
+        </h2>
+        <span flex=""></span>
+        <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="More">
+            <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<md-button ng-click="toggleLeft()" class="md-raised" layout-align="start start">
+    Toggle Sidenav
+</md-button>
+<md-content >
+    <div ui-view>
 
     </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ui-view>
-    </div>
-  </div>
-</div>
+
+</md-content>
+
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop="" md-whiteframe="4">
+
+    <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">Disabled Backdrop</h1>
+    </md-toolbar>
+<md-content>
+    <md-list flex="">
+        <md-subheader class="md-no-sticky">PAGES</md-subheader>
+        <md-list-item class="md-3-line"  ng-click="$state.go('home')">
+            <div class="md-list-item-text" layout="column">
+                <a ui-sref="home">Home <span class="sr-only"></span></a>
+            </div>
+        </md-list-item>
+        <md-divider></md-divider>
+
+        <md-list-item class="md-3-line"  ng-click="$state.go('receipt')">
+            <div class="md-list-item-text" layout="column">
+                <a ui-sref="receipt">Receipt <span class="sr-only"></span></a>
+            </div>
+        </md-list-item>
+        <md-divider></md-divider>
+
+        <md-list-item class="md-3-line"  ng-click="$state.go('addproduct')">
+            <div class="md-list-item-text" layout="column">
+                <a ui-sref="addproduct">Add Product <span class="sr-only"></span></a>
+            </div>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item class="md-3-line"  ng-click="toggleLeft()">
+            <div class="md-list-item-text" layout="column">
+                <md-button ng-click="toggleLeft()" class="md-raised">
+                    Toggle Sidenav
+                </md-button>
+            </div>
+        </md-list-item>
+        <md-divider></md-divider>
+    </md-list>
+</md-content>
+
+
+
+</md-sidenav>
 

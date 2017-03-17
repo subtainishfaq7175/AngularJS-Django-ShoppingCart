@@ -16,7 +16,7 @@ angular
   .config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.when('/dashboard', '/dashboard/home');
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/dashboard/home');
     //  delete $httpProvider.defaults.headers.common["X-Requested-With"];
 
 
