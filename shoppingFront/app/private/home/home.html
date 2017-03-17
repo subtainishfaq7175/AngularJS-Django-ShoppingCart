@@ -5,7 +5,30 @@
 
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-4" ng-repeat="(key,value) in products" style="background-color: #c3bee7; padding: 5px;">
+
+                <div class="col-md-3" ng-repeat="(key,value) in products" style="background-color: #b2acb4; margin: 5px;">
+                    <md-fab-toolbar md-open="false" count="demo.count" md-direction="left">
+                        <md-fab-trigger class="align-with-text">
+                            <md-button aria-label="menu" class="md-fab md-primary">
+                                <md-icon>list</md-icon>
+                            </md-button>
+                        </md-fab-trigger>
+
+                        <md-toolbar>
+                            <md-fab-actions class="md-toolbar-tools">
+                                <md-button aria-label="comment" class="md-icon-button">
+                                    <md-icon >add_shopping_cart</md-icon>
+                                </md-button>
+                                <md-button aria-label="label" class="md-icon-button" >
+                                    <md-icon >details</md-icon>
+                                </md-button>
+                                <md-button aria-label="photo" class="md-icon-button">
+                                    <md-icon md-svg-src="img/icons/ic_photo_24px.svg"></md-icon>
+                                </md-button>
+                            </md-fab-actions>
+                        </md-toolbar>
+                    </md-fab-toolbar>
+
                     <div >
                         <div class="card">
                             <img class="card-img-top" src="images/footer.jpg" class="img-responsive"  width= "100%;" alt="Card image cap">
