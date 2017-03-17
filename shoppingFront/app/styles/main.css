@@ -6717,6 +6717,7 @@ to prevent collapsing during animation*/
   right: 0;
   bottom: 0;
   top: 0;
+  padding-top:50px;
 }
 .ui-view-container {
   position: relative;

@@ -26,15 +26,18 @@ class CartSerializer(serializers.HyperlinkedModelSerializer):
         model = Cart
         fields = ( 'url', 'items',)
 
+
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Product
         fields = ( 'url', 'product_name','status', 'our_price', 'original_price','image_url','origianl_url', 'html','options' )
 
+
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Order
         fields = ( 'url', 'items','cart')
+
 
 class AuditSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

@@ -1,5 +1,4 @@
-from django.contrib.auth.models import User
-
+ç
 from rest_framework import viewsets
 from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
@@ -24,7 +23,6 @@ class AccountViewSet(viewsets.ModelViewSet):
         return User.objects.filter(username=user.username)
 
 
-
 class AddressViewSet(viewsets.ModelViewSet):
     model = Address
     serializer_class = AddressSerializer
@@ -35,6 +33,7 @@ class AddressViewSet(viewsets.ModelViewSet):
 
     def pre_save(self, obj):
         obj.user = self.request.user
+
 
 class CartViewSet(viewsets.ModelViewSet):
     model = Cart
@@ -52,9 +51,11 @@ class CartViewSet(viewsets.ModelViewSet):
     def pre_save(self, obj):
         obj.user = self.request.user
 
+
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
 
 class OrderViewSet(viewsets.ModelViewSet):
     model = Order
