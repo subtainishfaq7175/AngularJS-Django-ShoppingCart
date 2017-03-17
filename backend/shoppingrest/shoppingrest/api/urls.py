@@ -1,5 +1,5 @@
-from django.conf.urls import  url
-from shoppingrest.api.views import  *
+from django.conf.urls import url
+from shoppingrest.api.views import *
 
 urlpatternsinternal =[
     url(r'^products/$', product_list, name='product_list'),

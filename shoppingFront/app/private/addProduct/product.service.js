@@ -40,7 +40,7 @@ angular.module("yapp").factory('productService',['$http','SeatEatsConstants', fu
 
   companies.postProduct=function (obj)
   {
-    return $http.post(SeatEatsConstants.AppUrlApi+'products', obj)
+    return $http.post(SeatEatsConstants.AppUrlApi+'products/', obj)
 
   };
   return companies;

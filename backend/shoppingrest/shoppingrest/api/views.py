@@ -37,9 +37,10 @@ def product_list(request):
             return Response(
                 serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@csrf_exempt
+
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((permissions.AllowAny,))
+@csrf_exempt
 def product_detail(request, pk):
     """
     Get, udpate, or delete a specific product
@@ -66,9 +67,10 @@ def product_detail(request, pk):
         product.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-@csrf_exempt
+
 @api_view(['GET', 'POST'])
 @permission_classes((permissions.AllowAny,))
+@csrf_exempt
 def cart_list(request):
     """
     List all products, or create a new product.
@@ -87,9 +89,10 @@ def cart_list(request):
             return Response(
                 serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@csrf_exempt
+
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((permissions.AllowAny,))
+@csrf_exempt
 def cart_detail(request, pk):
     """
     Get, udpate, or delete a specific cart
@@ -116,9 +119,10 @@ def cart_detail(request, pk):
         cart.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-@csrf_exempt
+
 @api_view(['POST'])
 @permission_classes((permissions.AllowAny,))
+@csrf_exempt
 def create_auth(request):
     serialized = UserSerializer(data=request.data)
     if serialized.is_valid():

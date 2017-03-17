@@ -15,7 +15,7 @@ angular.module('yapp')
     vm.login = login;
     vm.credentials=
     {
-      name : undefined,
+      username : undefined,
       password:undefined
     };
 

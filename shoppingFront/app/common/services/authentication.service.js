@@ -18,7 +18,7 @@
     return service;
 
     function Login(username, password, callback) {
-      $http.post(SeatEatsConstants.AppUrl+'api-auth/login/', { username: username, password: password })
+      $http.post(SeatEatsConstants.AppUrl+'api-token-auth/', { username: username, password: password })
         .success(function (response) {
           // login successful if there's a token in the response
           debugger;
