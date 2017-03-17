@@ -1,3 +1,4 @@
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework import permissions
 from rest_framework import status
 from rest_framework import viewsets
@@ -17,6 +18,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
 @api_view(['GET', 'POST'])
 @permission_classes((permissions.AllowAny,))
+@csrf_exempt
 def product_list(request):
     """
     List all products, or create a new product.
@@ -35,7 +37,7 @@ def product_list(request):
             return Response(
                 serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+@csrf_exempt
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((permissions.AllowAny,))
 def product_detail(request, pk):
@@ -64,7 +66,7 @@ def product_detail(request, pk):
         product.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
+@csrf_exempt
 @api_view(['GET', 'POST'])
 @permission_classes((permissions.AllowAny,))
 def cart_list(request):
@@ -85,7 +87,7 @@ def cart_list(request):
             return Response(
                 serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
+@csrf_exempt
 @api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((permissions.AllowAny,))
 def cart_detail(request, pk):
@@ -114,7 +116,7 @@ def cart_detail(request, pk):
         cart.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-
+@csrf_exempt
 @api_view(['POST'])
 @permission_classes((permissions.AllowAny,))
 def create_auth(request):

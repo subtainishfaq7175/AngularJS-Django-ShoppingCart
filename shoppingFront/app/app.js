@@ -50,14 +50,32 @@ angular
             url: '/home',
             parent: 'dashboard',
             controller: 'HomeCtrl',
-            templateUrl: 'private/home/home.html'
+            templateUrl: 'private/home/home.html',
+        resolve:{
+
+          simpleObj:  function(productService,$stateParams)
+          {
+            //get game here
+
+
+            return productService.getProducts($stateParams.id);
+          }}
           })
 
       .state('details', {
-            url: '/details',
+            url: '/details/:id',
             parent: 'dashboard',
             controller: 'DetailsCtrl',
-            templateUrl: 'private/details/details.html'
+            templateUrl: 'private/details/details.html',
+        resolve:{
+
+          simpleObj:  function(productService,$stateParams)
+          {
+            //get game here
+
+
+            return productService.getProductById($stateParams.id);
+          }}
           })
 
       .state('receipt', {

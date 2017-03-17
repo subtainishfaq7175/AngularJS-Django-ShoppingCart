@@ -9,16 +9,23 @@ angular.module("yapp").factory('productService',['$http','SeatEatsConstants', fu
 
   var companies = {};
 
-  companies.getLetsplayById= function (ID)
+  companies.getProductById= function (ID)
   {
 
-    var promise = $http.get(SeatEatsConstants.AppUrlApi+'company/'+ID);
+    var promise = $http.get(SeatEatsConstants.AppUrlApi+'products/'+ID);
+    return promise;
+  };
+
+  companies.getProducts= function (ID)
+  {
+
+    var promise = $http.get(SeatEatsConstants.AppUrlApi+'products/');
     return promise;
   };
   companies.putLetsplay= function (obj)
   {
 
-    var promise = $http.put(SeatEatsConstants.AppUrlApi+'company/'+obj._id,obj);
+    var promise = $http.put(SeatEatsConstants.AppUrlApi+'products/'+obj._id,obj);
     return promise;
   };
 
@@ -31,9 +38,9 @@ angular.module("yapp").factory('productService',['$http','SeatEatsConstants', fu
 
 
 
-  companies.postLetsplay=function (obj)
+  companies.postProduct=function (obj)
   {
-    return $http.post(SeatEatsConstants.AppUrlApi+'company', obj)
+    return $http.post(SeatEatsConstants.AppUrlApi+'products', obj)
 
   };
   return companies;

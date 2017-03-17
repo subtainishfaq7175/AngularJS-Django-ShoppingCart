@@ -17,7 +17,7 @@
     angular.module('yapp').
     constant('SeatEatsConstants', {
 
-      "AppUrl":"http://localhost:8000/",
-      "AppUrlApi":"http://localhost:8000/api/",
+      "AppUrl":"http://127.0.0.1:8000/",
+      "AppUrlApi":"http://127.0.0.1:8000/api/",
     });
 })();

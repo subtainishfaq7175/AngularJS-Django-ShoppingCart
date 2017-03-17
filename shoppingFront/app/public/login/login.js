@@ -33,7 +33,7 @@ angular.module('yapp')
 
     function login() {
       $rootScope.scopeWorkingVariable = true;
-      AuthenticationService.Login(vm.credentials.name, vm.credentials.password, function (result)
+      AuthenticationService.Login(vm.credentials.username, vm.credentials.password, function (result)
       {
         debugger;
         if (result === true) {
