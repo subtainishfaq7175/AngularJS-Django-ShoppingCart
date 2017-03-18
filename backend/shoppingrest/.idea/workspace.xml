@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81d96385-f73c-4a28-a1f4-a6356afc872e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingrest/api/urls.py" afterPath="$PROJECT_DIR$/shoppingrest/api/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingrest/api/views.py" afterPath="$PROJECT_DIR$/shoppingrest/api/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingrest/settings.py" afterPath="$PROJECT_DIR$/shoppingrest/settings.py" />
-    </list>
+    <list default="true" id="81d96385-f73c-4a28-a1f4-a6356afc872e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
