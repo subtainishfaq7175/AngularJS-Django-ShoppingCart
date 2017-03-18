@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import permissions
 from rest_framework import status
@@ -134,3 +135,14 @@ def create_auth(request):
         return Response(serialized.data, status=status.HTTP_201_CREATED)
     else:
         return Response(serialized._errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['POST'])
+@permission_classes((permissions.AllowAny,))
+@csrf_exempt
+def email_client(request):
+    id = request.POST.get('id')
+    client = User.objects.get(id=id)
+
+    send_mail('Subject here', 'Here is the message.', 'from@example.com', ['to@example.com'], fail_silently=False)
+    return Response(status=status.HTTP_200_OK)
