@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework import permissions
 from rest_framework import status
 from rest_framework import viewsets
+from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.request import Request
 from rest_framework.response import Response
@@ -155,12 +156,15 @@ def email_client(request):
     return Response(status=status.HTTP_200_OK)
 
 
+serializer_class = AuthTokenSerializer
+
+
 @api_view(['POST'])
 @permission_classes((permissions.AllowAny,))
 @csrf_exempt
-def login(request):
-    serializer = UserSerializer(data=request.data)
+def login( request):
+    serializer = serializer_class(data=request.data)
     serializer.is_valid(raise_exception=True)
-    user = serializer.validated_data
-    #token = Token.objects.create(user=user)
-    return Response({'token': "signed in"})
+    user = serializer.validated_data['user']
+    token, created = Token.objects.get_or_create(user=user)
+    return Response({'token': token.key})
