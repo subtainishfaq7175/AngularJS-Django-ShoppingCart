@@ -4,6 +4,7 @@ from rest_framework import permissions
 from rest_framework import status
 from rest_framework import viewsets
 from rest_framework.decorators import api_view, permission_classes
+from rest_framework.request import Request
 from rest_framework.response import Response
 
 
@@ -125,14 +126,20 @@ def cart_detail(request, pk):
 @permission_classes((permissions.AllowAny,))
 @csrf_exempt
 def create_auth(request):
-    serialized = UserSerializer(data=request.data)
+    serializer_context = {
+        'request': Request(request),
+    }
+    serialized = UserSerializer(data=request.data,context=serializer_context)
     if serialized.is_valid():
-        User.objects.create_user(
-            serialized.init_data['email'],
-            serialized.init_data['username'],
-            serialized.init_data['password']
+        user = User.objects.create(
+            username=serialized['username'],
+            email=serialized['email'],
         )
-        return Response(serialized.data, status=status.HTTP_201_CREATED)
+
+        user.set_password(serialized['password'])
+        user.save()
+        token, created = Token.objects.get_or_create(user=user)
+        return Response({'token': token.key})
     else:
         return Response(serialized._errors, status=status.HTTP_400_BAD_REQUEST)
 

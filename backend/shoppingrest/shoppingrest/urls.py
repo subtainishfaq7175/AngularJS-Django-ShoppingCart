@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
-from rest_framework.authtoken import views
+from rest_framework.authtoken.views import obtain_auth_token
 
-from shoppingrest.api.views import UserViewSet
+from shoppingrest.api import views
+from shoppingrest.api.views import  create_auth
 from .api.urls import urlpatternsinternal
 from rest_framework import serializers, viewsets, routers
 
@@ -28,15 +29,12 @@ from rest_framework import serializers, viewsets, routers
 # ViewSets define the view behavior.
 
 # Routers provide a way of automatically determining the URL conf.
-router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
-
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^api-token-auth/', views.obtain_auth_token),
+    url(r'^api-token-auth/', obtain_auth_token),
+    url(r'^register', create_auth),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
    url(r'^api/', include(urlpatternsinternal)),
 
