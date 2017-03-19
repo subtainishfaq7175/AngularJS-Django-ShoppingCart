@@ -16,7 +16,8 @@ angular
   .config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.when('/dashboard', '/dashboard/home');
-    $urlRouterProvider.otherwise('/dashboard/home');
+    $urlRouterProvider.otherwise('/login');
+
     //  delete $httpProvider.defaults.headers.common["X-Requested-With"];
 
 
@@ -110,7 +111,7 @@ function run($rootScope, $http, $state, $localStorage) {
       $rootScope.scopeWorkingVariable=true;
 
 
-      var publicPages = ['login','signup','receipt','details'];
+      var publicPages = ['login','signup'];
       var restrictedPage = publicPages.indexOf(toState.name) === -1;
       if (restrictedPage && !$localStorage.currentUser) {
         $state.go('login');

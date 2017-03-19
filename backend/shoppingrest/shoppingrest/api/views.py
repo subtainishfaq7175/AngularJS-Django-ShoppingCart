@@ -153,3 +153,14 @@ def email_client(request):
 
     send_mail('Subject here', 'Here is the message.', 'from@example.com', ['to@example.com'], fail_silently=False)
     return Response(status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes((permissions.AllowAny,))
+@csrf_exempt
+def login(request):
+    serializer = UserSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    user = serializer.validated_data
+    #token = Token.objects.create(user=user)
+    return Response({'token': "signed in"})

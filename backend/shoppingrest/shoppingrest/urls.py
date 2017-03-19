@@ -18,7 +18,7 @@ from django.contrib.auth.models import User
 from rest_framework.authtoken.views import obtain_auth_token
 
 from shoppingrest.api import views
-from shoppingrest.api.views import  create_auth
+from shoppingrest.api.views import  create_auth, login
 from .api.urls import urlpatternsinternal
 from rest_framework import serializers, viewsets, routers
 
@@ -34,6 +34,7 @@ from rest_framework import serializers, viewsets, routers
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^api-token-auth/', obtain_auth_token),
+    url(r'^login/', login),
     url(r'^register', create_auth),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
    url(r'^api/', include(urlpatternsinternal)),

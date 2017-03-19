@@ -18,7 +18,7 @@
     return service;
 
     function Login(username, password, callback) {
-      $http.post(SeatEatsConstants.AppUrl+'api-token-auth/', { username: username, password: password })
+      $http.post(SeatEatsConstants.AppUrl+'login/', { username: username, password: password })
         .success(function (response) {
           // login successful if there's a token in the response
           debugger;
@@ -41,8 +41,8 @@
         });
     }
 
-    function SignUp(username, password, callback) {
-      $http.post(SeatEatsConstants.AppUrlApi+'signup', { name: username, password: password })
+    function SignUp(username, password,email , callback) {
+      $http.post(SeatEatsConstants.AppUrlApi+'register/', { name: username, password: password , email :email})
         .success(function (response) {
           // login successful if there's a token in the response
           debugger;

@@ -16,7 +16,8 @@ angular.module('yapp')
     vm.credentials=
     {
       name : undefined,
-      password:undefined
+      password:undefined,
+      email :undefined
     };
 
 
@@ -33,7 +34,7 @@ angular.module('yapp')
 
     function login() {
       vm.loading = true;
-      AuthenticationService.SignUp(vm.credentials.name, vm.credentials.password, function (result)
+      AuthenticationService.SignUp(vm.credentials.name, vm.credentials.password,vm.credentials.email, function (result)
       {
         debugger;
         if (result === true) {
