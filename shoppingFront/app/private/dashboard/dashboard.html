@@ -12,11 +12,14 @@
         <div layout-align="end end" layout="row">
 
 
-        <md-button  class="md-icon-button" aria-label="Settings" ng-click="$state.go('login')" style="float: right">
+        <md-button ng-if="!user.name" class="md-icon-button" aria-label="Settings" ng-click="$state.go('login')" style="float: right">
             <md-icon >account_circle</md-icon>
         </md-button>
-        <md-button  class="md-icon-button" aria-label="Settings" ng-click="$state.go('signup')" style="float: right">
+        <md-button ng-if="!user.name" class="md-icon-button" aria-label="Settings" ng-click="$state.go('signup')" style="float: right">
             <md-icon >book</md-icon>
+        </md-button>
+        <md-button ng-if="user.name" class="md-icon-button" aria-label="Settings" ng-disabled="true" style="float: right">
+            {{user.name}}
         </md-button>
 
             <md-button  class="md-icon-button" aria-label="Settings" ng-click="$state.go('receipt')" style="float: right">

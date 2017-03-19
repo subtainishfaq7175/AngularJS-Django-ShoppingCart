@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81d96385-f73c-4a28-a1f4-a6356afc872e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingrest/api/models.py" afterPath="$PROJECT_DIR$/shoppingrest/api/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingrest/api/serializers.py" afterPath="$PROJECT_DIR$/shoppingrest/api/serializers.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingrest/api/views.py" afterPath="$PROJECT_DIR$/shoppingrest/api/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../shoppingFront/app/private/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/../../shoppingFront/app/private/dashboard/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../shoppingFront/app/private/dashboard/dashboard.js" afterPath="$PROJECT_DIR$/../../shoppingFront/app/private/dashboard/dashboard.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +34,8 @@
           <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/shoppingrest/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="25" />
+                <state relative-caret-position="281">
+                  <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
                   <folding>
                     <element signature="e#646#687#0" expanded="true" />
                   </folding>
@@ -55,11 +53,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/shoppingrest/api/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
-                  <caret line="165" column="30" lean-forward="false" selection-start-line="165" selection-start-column="30" selection-end-line="165" selection-end-column="30" />
+                <state relative-caret-position="266">
+                  <caret line="162" column="27" lean-forward="true" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#38#0" expanded="true" />
                   </folding>
@@ -99,7 +97,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/shoppingrest/api/models.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="75">
@@ -188,12 +186,12 @@
         <option value="$PROJECT_DIR$/shoppingrest/wsgi.py" />
         <option value="$PROJECT_DIR$/shoppingrest/diablecsrf.py" />
         <option value="$PROJECT_DIR$/shoppingrest/api/urls.py" />
-        <option value="$PROJECT_DIR$/shoppingrest/urls.py" />
         <option value="$PROJECT_DIR$/../lib/python2.7/site-packages/rest_framework/authtoken/views.py" />
-        <option value="$PROJECT_DIR$/shoppingrest/api/views.py" />
         <option value="$PROJECT_DIR$/shoppingrest/api/serializers.py" />
         <option value="$PROJECT_DIR$/shoppingrest/settings.py" />
         <option value="$PROJECT_DIR$/shoppingrest/api/models.py" />
+        <option value="$PROJECT_DIR$/shoppingrest/api/views.py" />
+        <option value="$PROJECT_DIR$/shoppingrest/urls.py" />
       </list>
     </option>
   </component>
@@ -873,26 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoppingrest/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="165" column="30" lean-forward="false" selection-start-line="165" selection-start-column="30" selection-end-line="165" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shoppingrest/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="25" />
-          <folding>
-            <element signature="e#646#687#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shoppingrest/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9">
@@ -922,6 +900,26 @@
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoppingrest/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding>
+            <element signature="e#646#687#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoppingrest/api/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="162" column="27" lean-forward="true" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
