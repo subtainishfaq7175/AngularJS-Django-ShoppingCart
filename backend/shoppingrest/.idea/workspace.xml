@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81d96385-f73c-4a28-a1f4-a6356afc872e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingrest/api/views.py" afterPath="$PROJECT_DIR$/shoppingrest/api/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../shoppingFront/app/private/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/../../shoppingFront/app/private/dashboard/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../shoppingFront/app/private/dashboard/dashboard.js" afterPath="$PROJECT_DIR$/../../shoppingFront/app/private/dashboard/dashboard.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +27,7 @@
     <favorites_list name="shoppingrest" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.6316337">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
@@ -56,8 +55,8 @@
           <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/shoppingrest/api/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="162" column="27" lean-forward="true" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+                <state relative-caret-position="296">
+                  <caret line="163" column="4" lean-forward="false" selection-start-line="163" selection-start-column="4" selection-end-line="163" selection-end-column="4" />
                   <folding>
                     <element signature="e#0#38#0" expanded="true" />
                   </folding>
@@ -190,8 +189,8 @@
         <option value="$PROJECT_DIR$/shoppingrest/api/serializers.py" />
         <option value="$PROJECT_DIR$/shoppingrest/settings.py" />
         <option value="$PROJECT_DIR$/shoppingrest/api/models.py" />
-        <option value="$PROJECT_DIR$/shoppingrest/api/views.py" />
         <option value="$PROJECT_DIR$/shoppingrest/urls.py" />
+        <option value="$PROJECT_DIR$/shoppingrest/api/views.py" />
       </list>
     </option>
   </component>
@@ -915,8 +914,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shoppingrest/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="162" column="27" lean-forward="true" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+        <state relative-caret-position="296">
+          <caret line="163" column="4" lean-forward="false" selection-start-line="163" selection-start-column="4" selection-end-line="163" selection-end-column="4" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>

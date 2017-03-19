@@ -1,4 +1,5 @@
 from django.core.mail import send_mail
+from django.shortcuts import get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import permissions
 from rest_framework import status
@@ -159,9 +160,8 @@ def email_client(request):
 @permission_classes((permissions.AllowAny,))
 @csrf_exempt
 def login(request):
-    serializer = UserSerializer(data=request.data)
-    serializer.is_valid(raise_exception=True)
-    user = serializer.validated_data
-
-    #token, created = Token.objects.get_or_create(user=user)[0]
-    return Response({'token': "signeint"})
+    u = get_object_or_404(User, username=request.data['username'])
+   # u=User.objects.get(username=request.data['username'])
+    token = Token.objects.create(user=u)
+    print token.key
+    return Response({'token': token})
